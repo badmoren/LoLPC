@@ -21,7 +21,7 @@ Components Created:
   - Banner for person
     - Profile Icon (If can get from API)
     - Summoner name (The text search bar)
-    -  Champion selected (With icon and name)
+    - Champion selected (With icon and name)
   - Compare button
   - Result banner
     - Summoner name of winner
