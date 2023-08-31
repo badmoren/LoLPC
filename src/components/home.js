@@ -1,18 +1,26 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {createGlobalStyle} from 'styled-components';
+import Header from './header';
 
-
-const StyleTest = styled.div`
-   background-color: #FFF;
-   color: #e00000;
-   display: flex;
-   font-size: 90px;
+const GlobalStyles = createGlobalStyle`
+    body {
+        background-color: rgb(179, 149, 86);
+    }
+`
+const MainContent = styled.div`
+    background-color: black;
 `
 
-function home({ prop2 }) {
+
+function home({}) {
     return (
-        <StyleTest prop={prop2}>text</StyleTest>
-    )
-}
+        <>
+            <GlobalStyles />
+            <MainContent>
+                <Header />
+            </MainContent>
+        </>
+    );
+};
 
 export default home
