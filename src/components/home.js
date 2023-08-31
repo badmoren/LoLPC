@@ -8,23 +8,16 @@ const GlobalStyles = createGlobalStyle`
     }
 `
 const MainContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: black;
-    height: 100%;
+    background-color: rgb(179, 149, 86);
 `
 
 
 function home({}) {
     return (
-        <>
+        <MainContent>
             <GlobalStyles />
             <Header />
-            <MainContent>
-                
-            </MainContent>
-        </>
+        </MainContent>
     );
 };
 

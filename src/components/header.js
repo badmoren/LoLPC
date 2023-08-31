@@ -4,30 +4,33 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const StyledIcon = styled(FontAwesomeIcon)`
-    position: relative;
-    padding-bottom: 5%;
     color: white;
-    font-size: 4rem;
-    padding-right: 10%;
-`
+    font-size: 5rem;
+    position: absolute;
+    top: 50%; 
+    left: 1rem;
+    margin-top: -2.5rem; 
+`;
+
 const HeaderContent = styled.div`
-   background-color: rgb(11, 25, 71);
-   color: rgb(179, 149, 86);
-   font-size: 10rem;
-   width: 100%;
-   height: 200px;
-   padding-bottom: 5%;
-`
+    background-color: rgb(11, 25, 71);
+    color: rgb(179, 149, 86);
+    text-align: center;
+    font-size: 6rem;
+    width: 100vw;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem 0; 
+    position: relative;
+`;
 
-
-
-function header() {
+function Header() {
     return (
         <HeaderContent>
-            <StyledIcon icon={faBars} size="lg" />
+            <StyledIcon icon={faBars} />
             LoL Apps
         </HeaderContent>
-    )
+    );
 }
 
-export default header
+export default Header;
