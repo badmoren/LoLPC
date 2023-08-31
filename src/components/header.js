@@ -5,11 +5,11 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const StyledIcon = styled(FontAwesomeIcon)`
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     position: absolute;
     top: 50%; 
     left: 1rem;
-    margin-top: -2rem; 
+    margin-top: -1.5rem; 
 `;
 
 const HeaderContent = styled.div`
