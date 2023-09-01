@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled, {createGlobalStyle} from 'styled-components';
 import Header from './header';
-import SummonerInfo from '../api/riotApi';
+import { SummonerInfo, SummonerEntries } from '../api/riotApi';
 
 const GlobalStyles = createGlobalStyle`
     body {
@@ -16,9 +16,22 @@ function Home() {
     const [summonerData, setSummonerData] = useState("");
 
     useEffect(() => {
-        SummonerInfo('BIGBOIOOZA')
+        SummonerInfo('') // Enter Summoner Name
         .then(data => {
-            setSummonerData(JSON.stringify(data));
+            setSummonerData(JSON.stringify(data.data));
+        })
+        .catch(error => {
+            console.error(error)
+        });
+    }, []);
+
+    const [summonerEntries, setSummonerEntries] = useState("");
+
+    useEffect(() => {
+        SummonerEntries('AoHdEI3V3yjUCgPV__I-e3VGzsaILnM9qwh7vrzsZBQIWzWd')
+        .then(data => {
+            console.log('Data check: ', data);
+            setSummonerEntries(JSON.stringify(data));
         })
         .catch(error => {
             console.error(error)
